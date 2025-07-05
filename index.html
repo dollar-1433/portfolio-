@@ -1,158 +1,356 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Code</title>
+    <title>M. Naveel Chowdary - Web Developer</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header class="header">
-        <nav class="navbar">
-            <div class="navbar-container container">
-                <div>
-                    <h1 class="navbar-brand">Sanket Bodake</h1>
-                </div>
-                <ul class="menu-items">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#my-works">Portfolio</a></li>
-                    <li><a href="#contact-me">Contact</a></li>
-                </ul>
+    <!-- Cursor follower -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container container">
+            <div class="navbar-brand">
+                <span class="brand-text">M. Naveel Chowdary</span>
             </div>
-        </nav>
-        <div class="home-content" id="home-page">
-            <div class="name">
-                <h1>Hi, I'm M.Naveel Chowdary</h1>
-                <p> Web Developer</p>
-            </div>
-            <div class="angle-down-icon">
-                <a href="#about"><i class="fas fa-angle-down"></i></a>
+            <ul class="menu-items">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
-    </header>
-    <section class="about-me" id="about">
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">Hi, I'm</span>
+                    <span class="title-line gradient-text">M. Naveel Chowdary</span>
+                </h1>
+                <p class="hero-subtitle">Creative Web Developer & Problem Solver</p>
+                <p class="hero-description">
+                    Crafting beautiful, functional web experiences with modern technologies
+                    and innovative design solutions.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span class="scroll-text">Scroll</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
         <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know me better</p>
+            </div>
             <div class="about-content">
-                <div class="left-content">
-                    <div>
-                        <h1 class="about-heading">About Me</h1>
-                    </div>
-                    <img src="https://i.postimg.cc/Hx4nChpH/fbavatar-1630400663387-6838396024049256103.png"
-                        alt="image" />
-                    <p>
-                        I am 20 year old, B.Tech student studing at vignan College of CSE.
-                        I really enjoy solving problems as well as making things pretty and easy to use. I can't stop
-                        learning new
-                        things; the more, the better.
-                    </p>
-                    <div class="work-arrow">
-                        <p>
-                            <a href="#my-works">Check out my work <i class="fas fa-arrow-down"></i></a>
-                        </p>
+                <div class="about-image">
+                    <div class="image-container">
+                        <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Profile" />
+                        <div class="image-overlay"></div>
                     </div>
                 </div>
-                <div class="skills">
-                    <div class="right-content">
-                        <div>
-                            <h1 class="skills-heading">My Skills</h1>
+                <div class="about-text">
+                    <h3>Passionate Developer & Creative Thinker</h3>
+                    <p>
+                        I'm a 20-year-old B.Tech student studying Computer Science Engineering at Vignan College. 
+                        My passion lies in solving complex problems and creating beautiful, user-friendly digital experiences.
+                    </p>
+                    <p>
+                        I believe in continuous learning and staying updated with the latest technologies. 
+                        Every project is an opportunity to push boundaries and create something extraordinary.
+                    </p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">20+</span>
+                            <span class="stat-label">Projects</span>
                         </div>
-                        <div class="skills-bar">
-                            <div class="bar">
-                                <div class="info">
-                                    <span>HTML</span>
+                        <div class="stat-item">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Dedication</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Skills</h2>
+                <p class="section-subtitle">Technologies I work with</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card" data-skill="html">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>HTML5</h3>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-width="90"></div>
+                    </div>
+                    <span class="skill-percentage">90%</span>
+                </div>
+                <div class="skill-card" data-skill="css">
+                    <div class="skill-icon">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <h3>CSS3</h3>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-width="85"></div>
+                    </div>
+                    <span class="skill-percentage">85%</span>
+                </div>
+                <div class="skill-card" data-skill="js">
+                    <div class="skill-icon">
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-width="75"></div>
+                    </div>
+                    <span class="skill-percentage">75%</span>
+                </div>
+                <div class="skill-card" data-skill="bootstrap">
+                    <div class="skill-icon">
+                        <i class="fab fa-bootstrap"></i>
+                    </div>
+                    <h3>Bootstrap</h3>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-width="80"></div>
+                    </div>
+                    <span class="skill-percentage">80%</span>
+                </div>
+                <div class="skill-card" data-skill="python">
+                    <div class="skill-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Python</h3>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-width="70"></div>
+                    </div>
+                    <span class="skill-percentage">70%</span>
+                </div>
+                <div class="skill-card" data-skill="c">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>C Programming</h3>
+                    <div class="skill-progress">
+                        <div class="progress-bar" data-width="75"></div>
+                    </div>
+                    <span class="skill-percentage">75%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Portfolio</h2>
+                <p class="section-subtitle">Recent projects I've worked on</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600" alt="E-commerce Website" />
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>E-commerce Platform</h3>
+                                <p>Modern responsive e-commerce website with shopping cart functionality</p>
+                                <div class="portfolio-tech">
+                                    <span class="tech-tag">HTML</span>
+                                    <span class="tech-tag">CSS</span>
+                                    <span class="tech-tag">JavaScript</span>
                                 </div>
-                                <div class="progress-line"><span class="html"></span></div>
-                                <div class="bar">
-                                    <div class="info">
-                                        <span>CSS</span>
-                                    </div>
-                                    <div class="progress-line"><span class="css"></span></div>
-                                    <div class="bar">
-                                        <div class="info">
-                                            <span>BOOTSTRAP</span>
-                                        </div>
-                                        <div class="progress-line"><span class="bootstrap"></span></div>
-                                        <div class="bar">
-                                            <div class="info">
-                                                <span>PYTHON</span>
-                                            </div>
-                                            <div class="progress-line"><span class="javascript"></span></div>
-                                            <div class="bar">
-                                                <div class="info">
-                                                    <span>C Programming</span>
-                                                </div>
-                                                <div class="progress-line"><span class="c"></span></div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="portfolio-links">
+                                    <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                                    <a href="#" class="portfolio-link"><i class="fab fa-github"></i></a>
                                 </div>
                             </div>
                         </div>
-                        <div class="work-arrow-2">
-                            <p>
-                                <a href="#my-works">Check out my work <i class="fas fa-arrow-down"></i></a>
-                            </p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Restaurant Website" />
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Restaurant Website</h3>
+                                <p>Beautiful restaurant website with online reservation system</p>
+                                <div class="portfolio-tech">
+                                    <span class="tech-tag">HTML</span>
+                                    <span class="tech-tag">CSS</span>
+                                    <span class="tech-tag">Bootstrap</span>
+                                </div>
+                                <div class="portfolio-links">
+                                    <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                                    <a href="#" class="portfolio-link"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="app">
+                    <div class="portfolio-image">
+                        <img src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Task Manager" />
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Task Management App</h3>
+                                <p>Interactive task manager with drag-and-drop functionality</p>
+                                <div class="portfolio-tech">
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">CSS</span>
+                                    <span class="tech-tag">HTML</span>
+                                </div>
+                                <div class="portfolio-links">
+                                    <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                                    <a href="#" class="portfolio-link"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Portfolio Website" />
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Personal Portfolio</h3>
+                                <p>Responsive portfolio website showcasing creative design</p>
+                                <div class="portfolio-tech">
+                                    <span class="tech-tag">HTML</span>
+                                    <span class="tech-tag">CSS</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                </div>
+                                <div class="portfolio-links">
+                                    <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
+                                    <a href="#" class="portfolio-link"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section id="my-works">
-        <div class="portfolio">
-            <div class="proj-heading">
-                <h1>Portfolio</h1>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's work together on your next project</p>
             </div>
-            <div class="portfolio-content container">
-
-                <div class="proj1-details">
-                    <i class="fab fa-html5"></i>
-                    <i class="fab fa-css3-alt"></i>
-                    <i class="fab fa-js"></i>
-                    <h2></h2>
-
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p>+91 8328109142</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>naveelmadala@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p>Vignan College, India</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
                 </div>
             </div>
-
-            <div class="proj2-details">
-                <i class="fab fa-html5"></i>
-                <i class="fab fa-css3-alt"></i>
-                <h2></h2>
-                <p></p>
-
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/naveel-madala-71081a256" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/dollar-1433" target="_blank" class="social-link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/imsanketbodke/" target="_blank" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
             </div>
-
-        </div>
-
-        </div>
         </div>
     </section>
-    <div class="contact" id="contact-me">
+
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
-            <div class="contact-content">
-                <h2>Contact Me</h2>
-                <h3>8328109142</h3>
-                <p class="mail">
-                    Get in touch with me <i class="fas fa-arrow-right"></i> naveelmadala@gmail.com
-                </p>
-                <p class="links">Or find me on:</p>
-                <a href="https://www.linkedin.com/in/naveel-madala-71081a256?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                    target="blank"><i class="fab fa-linkedin">
-                        Linkedin</i></a>
-                <a href="https://github.com/dollar-1433" target="blank"><i class="fab fa-github"></i> Github</a>
-                <a href="https://www.instagram.com/imsanketbodke/" target="blank"><i class="fab fa-instagram"></i>
-                    Instagram</a>
-            </div>
+            <p>&copy; 2025 M. Naveel Chowdary. All rights reserved.</p>
         </div>
-    </div>
-    <!-- JAVASCRIPT -->
-    <script src="app.js"></script>
+    </footer>
 
+    <script src="script.js"></script>
 </body>
-
 </html>
