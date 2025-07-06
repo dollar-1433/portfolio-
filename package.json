@@ -1,0 +1,14 @@
+{
+  "name": "static-portfolio",
+  "version": "1.0.0",
+  "description": "Static portfolio website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve -s . -l 5173",
+    "start": "npx serve -s . -l 5173",
+    "build": "echo 'No build step needed for static site'"
+  },
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}
