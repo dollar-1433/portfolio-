@@ -1,23 +1,3 @@
-// Custom cursor
-const cursorDot = document.querySelector('[data-cursor-dot]');
-const cursorOutline = document.querySelector('[data-cursor-outline]');
-
-window.addEventListener('mousemove', (e) => {
-    const posX = e.clientX;
-    const posY = e.clientY;
-    
-    cursorDot.style.left = `${posX}px`;
-    cursorDot.style.top = `${posY}px`;
-    
-    cursorOutline.style.left = `${posX}px`;
-    cursorOutline.style.top = `${posY}px`;
-    
-    cursorOutline.animate({
-        left: `${posX}px`,
-        top: `${posY}px`
-    }, { duration: 500, fill: "forwards" });
-});
-
 // Navbar scroll effect
 window.addEventListener('scroll', () => {
     const navbar = document.getElementById('navbar');
@@ -199,19 +179,6 @@ if (hamburger) {
         menuItems.classList.toggle('active');
     });
 }
-
-// Add hover effects to interactive elements
-document.querySelectorAll('.btn, .portfolio-item, .skill-card, .social-link').forEach(element => {
-    element.addEventListener('mouseenter', () => {
-        cursorOutline.style.transform = 'scale(1.5)';
-        cursorOutline.style.borderColor = '#6366f1';
-    });
-    
-    element.addEventListener('mouseleave', () => {
-        cursorOutline.style.transform = 'scale(1)';
-        cursorOutline.style.borderColor = 'rgba(99, 102, 241, 0.3)';
-    });
-});
 
 // Preloader
 window.addEventListener('load', () => {
