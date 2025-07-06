@@ -74,7 +74,7 @@ function renderPortfolio() {
 // Initialize portfolio when DOM is loaded
 document.addEventListener('DOMContentLoaded', renderPortfolio);
 
-// Your Projects
+// Your Projects - Add your projects here
 portfolioProjects.push(
     {
         title: "Student Collaboration Website",
@@ -101,3 +101,6 @@ portfolioProjects.push(
         category: "app"
     }
 );
+
+// Re-render portfolio after adding projects
+renderPortfolio();
