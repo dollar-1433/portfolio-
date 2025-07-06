@@ -262,8 +262,3 @@ window.addEventListener('scroll', () => {
     const scrollPercent = (scrollTop / docHeight) * 100;
     scrollProgress.style.width = scrollPercent + '%';
 });
-
-// Load projects script
-const projectsScript = document.createElement('script');
-projectsScript.src = 'projects.js';
-document.head.appendChild(projectsScript);
