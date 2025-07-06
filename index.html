@@ -242,31 +242,37 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form>
+                    <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                         <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
+                            <input type="text" name="name" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" placeholder="Subject" required>
+                            <input type="text" name="subject" placeholder="Subject" required>
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <button type="submit" class="btn btn-primary" id="submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loading" style="display: none;">
+                                <i class="fas fa-spinner fa-spin"></i> Sending...
+                            </span>
+                        </button>
                     </form>
+                    <div id="form-status" class="form-status"></div>
                 </div>
             </div>
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/naveel-madala-71081a256" target="_blank" class="social-link">
-                    <i class="fab fa-linkedin"></i>
+                <a href="https://www.linkedin.com/in/naveel-madala-71081a256" target="_blank" class="social-link linkedin" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="https://github.com/dollar-1433" target="_blank" class="social-link">
+                <a href="https://github.com/dollar-1433" target="_blank" class="social-link github" title="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://www.instagram.com/imsanketbodke/" target="_blank" class="social-link">
+                <a href="https://www.instagram.com/imsanketbodke/" target="_blank" class="social-link instagram" title="Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>

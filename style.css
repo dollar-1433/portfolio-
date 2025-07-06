@@ -264,17 +264,25 @@ body {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
 }
 
 .btn-primary {
     background: linear-gradient(45deg, #6366f1, #8b5cf6);
     color: white;
-    border: none;
 }
 
 .btn-primary:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+}
+
+.btn-primary:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
 }
 
 .btn-secondary {
@@ -719,6 +727,7 @@ section {
     font-size: 1rem;
     transition: border-color 0.3s ease;
     background: white;
+    font-family: inherit;
 }
 
 .form-group input:focus,
@@ -727,6 +736,37 @@ section {
     border-color: #6366f1;
 }
 
+/* Form Status Styles */
+.form-status {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    display: none;
+}
+
+.form-status.success {
+    background: #d1fae5;
+    border: 1px solid #10b981;
+    color: #065f46;
+}
+
+.form-status.error {
+    background: #fee2e2;
+    border: 1px solid #ef4444;
+    color: #991b1b;
+}
+
+.status-content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.status-content i {
+    font-size: 1.2rem;
+}
+
+/* Social Links */
 .social-links {
     display: flex;
     justify-content: center;
@@ -739,17 +779,46 @@ section {
     justify-content: center;
     width: 50px;
     height: 50px;
-    background: linear-gradient(45deg, #6366f1, #8b5cf6);
     border-radius: 50%;
     color: white;
     text-decoration: none;
     font-size: 1.5rem;
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+.social-link.linkedin::before {
+    background: linear-gradient(45deg, #0077b5, #00a0dc);
+}
+
+.social-link.github::before {
+    background: linear-gradient(45deg, #333, #555);
+}
+
+.social-link.instagram::before {
+    background: linear-gradient(45deg, #e4405f, #f77737, #fcaf45);
 }
 
 .social-link:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.social-link:hover::before {
+    transform: scale(1.1);
 }
 
 /* Footer */

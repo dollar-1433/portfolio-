@@ -114,39 +114,80 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Form submission
-const contactForm = document.querySelector('.contact-form form');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(contactForm);
-        const formObject = {};
-        formData.forEach((value, key) => {
-            formObject[key] = value;
-        });
-        
-        // Simulate form submission
-        const submitBtn = contactForm.querySelector('.btn-primary');
-        const originalText = submitBtn.textContent;
-        
-        submitBtn.textContent = 'Sending...';
-        submitBtn.style.opacity = '0.7';
-        
-        setTimeout(() => {
-            submitBtn.textContent = 'Message Sent!';
-            submitBtn.style.background = 'linear-gradient(45deg, #10b981, #059669)';
+// Enhanced Contact Form Handling
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const formStatus = document.getElementById('form-status');
+    const btnText = submitBtn.querySelector('.btn-text');
+    const btnLoading = submitBtn.querySelector('.btn-loading');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
             
-            setTimeout(() => {
-                submitBtn.textContent = originalText;
-                submitBtn.style.background = 'linear-gradient(45deg, #6366f1, #8b5cf6)';
-                submitBtn.style.opacity = '1';
+            // Show loading state
+            btnText.style.display = 'none';
+            btnLoading.style.display = 'inline-block';
+            submitBtn.disabled = true;
+            formStatus.innerHTML = '';
+            
+            try {
+                // Get form data
+                const formData = new FormData(contactForm);
+                
+                // For demonstration, we'll use a mock submission
+                // Replace this with your actual form submission logic
+                await simulateFormSubmission(formData);
+                
+                // Success state
+                showFormStatus('success', 'Message sent successfully! I will get back to you soon.');
                 contactForm.reset();
+                
+            } catch (error) {
+                // Error state
+                showFormStatus('error', 'Failed to send message. Please try again or contact me directly.');
+                console.error('Form submission error:', error);
+            } finally {
+                // Reset button state
+                btnText.style.display = 'inline-block';
+                btnLoading.style.display = 'none';
+                submitBtn.disabled = false;
+            }
+        });
+    }
+
+    // Function to simulate form submission (replace with real implementation)
+    async function simulateFormSubmission(formData) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                // Simulate success (90% of the time)
+                if (Math.random() > 0.1) {
+                    resolve();
+                } else {
+                    reject(new Error('Simulated network error'));
+                }
             }, 2000);
-        }, 1500);
-    });
-}
+        });
+    }
+
+    // Function to show form status
+    function showFormStatus(type, message) {
+        formStatus.className = `form-status ${type}`;
+        formStatus.innerHTML = `
+            <div class="status-content">
+                <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'}"></i>
+                <span>${message}</span>
+            </div>
+        `;
+        formStatus.style.display = 'block';
+        
+        // Auto-hide after 5 seconds
+        setTimeout(() => {
+            formStatus.style.display = 'none';
+        }, 5000);
+    }
+});
 
 // Mobile menu toggle
 const hamburger = document.getElementById('hamburger');
