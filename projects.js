@@ -1,18 +1,5 @@
 // Portfolio Projects Data
-const portfolioProjects = [
-    // Add your projects here following this structure:
-    /*
-    {
-        title: "Project Title",
-        description: "Brief description of your project",
-        image: "https://your-image-url.com/image.jpg",
-        technologies: ["HTML", "CSS", "JavaScript"], // Array of technologies used
-        liveUrl: "https://your-live-project-url.com", // Optional
-        githubUrl: "https://github.com/your-username/project-repo", // Optional
-        category: "web" // web, app, design, etc.
-    }
-    */
-];
+const portfolioProjects = [];
 
 // Function to create portfolio item HTML
 function createPortfolioItem(project) {
@@ -87,35 +74,30 @@ function renderPortfolio() {
 // Initialize portfolio when DOM is loaded
 document.addEventListener('DOMContentLoaded', renderPortfolio);
 
-// Example projects (uncomment and modify these to add your projects):
-/*
+// Your Projects
 portfolioProjects.push(
     {
-        title: "E-commerce Website",
-        description: "A modern responsive e-commerce platform with shopping cart functionality",
-        image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600",
-        technologies: ["HTML", "CSS", "JavaScript", "Bootstrap"],
-        liveUrl: "https://your-ecommerce-site.com",
-        githubUrl: "https://github.com/yourusername/ecommerce-project",
+        title: "Student Collaboration Website",
+        description: "A collaborative platform designed for students to work together on projects, share resources, and communicate effectively in a digital workspace.",
+        image: "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=600",
+        technologies: ["React", "JavaScript", "CSS", "Node.js"],
+        liveUrl: "https://collab-space-village-yt12.vercel.app/",
         category: "web"
     },
     {
-        title: "Task Management App",
-        description: "Interactive task manager with drag-and-drop functionality and local storage",
-        image: "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=600",
-        technologies: ["JavaScript", "CSS", "HTML", "Local Storage"],
-        liveUrl: "https://your-task-app.com",
-        githubUrl: "https://github.com/yourusername/task-manager",
+        title: "White Space Board",
+        description: "An interactive digital whiteboard application that allows users to draw, write, and collaborate in real-time with various tools and features.",
+        image: "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=600",
+        technologies: ["JavaScript", "Canvas API", "HTML5", "CSS"],
+        liveUrl: "https://more-whiteboard.vercel.app/",
         category: "app"
     },
     {
-        title: "Restaurant Website",
-        description: "Beautiful restaurant website with online reservation system and menu display",
-        image: "https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=600",
-        technologies: ["HTML", "CSS", "Bootstrap", "JavaScript"],
-        liveUrl: "https://your-restaurant-site.com",
-        githubUrl: "https://github.com/yourusername/restaurant-website",
-        category: "web"
+        title: "Recipes App",
+        description: "A comprehensive recipe application where users can discover, save, and share their favorite recipes with detailed instructions and ingredients.",
+        image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600",
+        technologies: ["React", "API Integration", "JavaScript", "CSS"],
+        liveUrl: "https://recipes-app-wheat.vercel.app/",
+        category: "app"
     }
 );
-*/
