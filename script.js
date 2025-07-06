@@ -56,6 +56,9 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
+// Make observer globally available for projects.js
+window.observer = observer;
+
 // Add reveal class to elements and observe them
 document.addEventListener('DOMContentLoaded', () => {
     const revealElements = document.querySelectorAll('.section-header, .about-content, .skill-card, .portfolio-item, .contact-content');
@@ -174,12 +177,6 @@ window.addEventListener('load', () => {
     document.body.classList.add('loaded');
 });
 
-// Add stagger animation to portfolio items
-const portfolioItems = document.querySelectorAll('.portfolio-item');
-portfolioItems.forEach((item, index) => {
-    item.style.animationDelay = `${index * 0.1}s`;
-});
-
 // Add counter animation for stats
 function animateCounter(element, target, duration = 2000) {
     let start = 0;
@@ -265,3 +262,8 @@ window.addEventListener('scroll', () => {
     const scrollPercent = (scrollTop / docHeight) * 100;
     scrollProgress.style.width = scrollPercent + '%';
 });
+
+// Load projects script
+const projectsScript = document.createElement('script');
+projectsScript.src = 'projects.js';
+document.head.appendChild(projectsScript);
